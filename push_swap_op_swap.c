@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_op.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csilva <csilva@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 09:29:31 by csilva            #+#    #+#             */
-/*   Updated: 2025/12/23 16:37:43 by csilva           ###   ########.fr       */
+/*   Created: 2025/12/23 16:28:05 by csilva            #+#    #+#             */
+/*   Updated: 2025/12/23 16:47:17 by csilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+void	ft_swap(t_stack *stack)
 {
-	unsigned int capacity;
-	int	size;
-	int	*array;
-} t_stack;
+	int	tmp;
 
-int	parser(char *s);
-int	ft_isdigit(int c);
-int	push_swap(int ac, char *av[]);
-long	ft_atol(char *s);
+	tmp = stack->array[0];
+	stack->array[0] = stack->array[1];
+	stack->array[1] = tmp;
+}
 
-#endif
+void	sa(t_stack *a)
+{
+	ft_swap(a);
+	write(1, "sa\n", 3);
+}
+
+void	sb(t_stack *b)
+{
+	ft_swap(b);
+	write(1, "sb\n", 3);
+}
+
+void	ss(t_stack *a, t_stack *b)
+{
+	ft_swap(a);
+	ft_swap(b);
+	write(1, "ss\n", 3);
+}
+

@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_op_rrotate.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csilva <csilva@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 09:29:31 by csilva            #+#    #+#             */
-/*   Updated: 2025/12/23 16:37:43 by csilva           ###   ########.fr       */
+/*   Created: 2025/12/23 17:07:54 by csilva            #+#    #+#             */
+/*   Updated: 2025/12/23 17:12:17 by csilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+void	ft_rrotate(t_stack	*stack)
 {
-	unsigned int capacity;
-	int	size;
-	int	*array;
-} t_stack;
-
-int	parser(char *s);
-int	ft_isdigit(int c);
-int	push_swap(int ac, char *av[]);
-long	ft_atol(char *s);
-
-#endif
+	
+}
