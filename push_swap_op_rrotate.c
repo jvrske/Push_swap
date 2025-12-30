@@ -6,13 +6,13 @@
 /*   By: csilva <csilva@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:07:54 by csilva            #+#    #+#             */
-/*   Updated: 2025/12/23 17:12:17 by csilva           ###   ########.fr       */
+/*   Updated: 2025/12/30 16:45:53 by csilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rrotate(t_stack	*stack)
+/* void	ft_rrotate(t_stack	*stack)
 {
 	
-}
+} */

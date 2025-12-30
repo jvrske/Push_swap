@@ -6,7 +6,7 @@
 /*   By: csilva <csilva@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 13:51:15 by csilva            #+#    #+#             */
-/*   Updated: 2025/12/22 14:21:27 by csilva           ###   ########.fr       */
+/*   Updated: 2025/12/30 17:02:21 by csilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,43 @@
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+		return (0);
+	return (1);
 }
 
+int	ft_signal(char c)
+{
+	if (c == '-' || c == '+')
+		return (0);
+	return (1);
+}
+
+int ft_isspace(int c)
+{
+	return(c == ' ' || c == '\0' || c == '\n' || c == '\t');
+}
+
+int	ft_countnumbers(char *s)
+{
+	int	i;
+	int	nbr;
+
+	i = 0;
+	nbr = 0;
+	while (s[i])
+	{
+		if (!ft_isdigit(s[i]) && ft_isspace(s[i + 1]))
+			nbr++;
+		i++;
+	}
+	return (nbr);
+}
+char *ft_getnextnum(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != ' ' && s[i] != '\t')
+		i++;
+	return (NULL);
+}
